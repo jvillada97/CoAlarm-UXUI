@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">CoAlarm</string>
+    <string-array name="title_options">
+        <item>Diario</item>
+        <item>Semanal</item>
+        <item>Mensual</item>
+        <item>Anual</item>
+    </string-array>
+    <string name="alarma">Alarma</string>
+    <string name="hora">Hora</string>
+    <string name="grupo">Grupo</string>
+    <string name="placeHolderGrupo">Selecciona un grupo</string>
+    <string name="crearAlarma">Crear Alarma</string>
+    <string name="fecha">Fecha</string>
+    <string name="titulo">Título</string>
+    <string name="placeHolder">08/17/2024</string>
+    <string name="placeHolderTitulo">Ingresa un título a tu alarma</string>
+    <string name="placeHolderHora">12:00 AM</string>
+    <string name="frecuencia">Frecuencia</string>
+    <string name="placeHolderFrecuencia">Selecciona una frecuencia</string>
+    <string name="correo">Correo</string>
+    <string name="imagenFondo">Imagen Fondo</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="placeHolderCorreo">Ingresa tu correo</string>
+    <string name="constraseña">Contraseña</string>
+    <string name="PlaceHoldercontraseña">**********</string>
+</resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="moradoPrincipal">#8338EC</color>
+    <color name="rosadoPrincipal">#EBC3DB</color>
+    <color name="rojoPrincipal">#D05353</color>
+    <color name="grisPrincipal">#EDE3E9</color>
+    <color name="negroPrincipal">#191919</color>
+
+    <color name="morado20">#7331D5</color>
+    <color name="morado40">#642BBD</color>
+    <color name="morado60">#5425A5</color>
+    <color name="morado80">#441F8D</color>
+    <color name="moradoOscuro">#341975</color>
+    <color name="moradomenos20">#8E4DF0</color>
+    <color name="moradomenos40">#995EF3</color>
+    <color name="moradomenos60">#995EF3</color>
+    <color name="moradomenos80">#AE81F7</color>
+    <color name="moradoClaro">#B993F9</color>
+    <color name="rosadomenos20">#EBCAD8</color>
+    <color name="rosadomenos40">#ECD1DD</color>
+    <color name="rosadomenos60">#EDD8E2</color>
+    <color name="rosadomenos80">#EEDFE7</color>
+    <color name="rosadoClaro">#EFE6EC</color>
+    <color name="blancoCoalarm">#F5F5F5</color>
+    <color name="grisCoAlarm">#969696</color>
+
+</resources>

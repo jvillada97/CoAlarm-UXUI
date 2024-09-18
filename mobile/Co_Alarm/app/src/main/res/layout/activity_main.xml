@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    tools:context=".MainActivity"
+    android:background="@drawable/fondo">
+
+    <TextView
+        android:id="@+id/coalarm"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="329dp"
+        android:layout_marginStart="115dp"
+        android:fontFamily="@font/lato_black"
+        android:gravity="center_horizontal|center_vertical"
+        android:lineSpacingExtra="-15sp"
+        android:text="@string/app_name"
+        android:textColor="@color/moradoPrincipal"
+        android:textSize="40sp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/correo"
+        android:layout_width="273dp"
+        android:layout_height="56dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="69dp"
+        android:layout_marginTop="516dp"
+        android:hint="@string/correo"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeColor="@color/morado60"
+        app:boxStrokeWidth="2.5dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:gravity="center_vertical"
+            android:inputType="textEmailAddress"
+            android:text="@string/placeHolderCorreo"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textColorLink="@color/morado60"
+            tools:ignore="ExtraText" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password"
+        android:layout_width="273dp"
+        android:layout_height="56dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="605dp"
+        android:layout_marginStart="69dp"
+        android:hint="@string/constraseña"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeColor="@color/morado60"
+        app:boxStrokeWidth="2.5dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:inputType="textPassword"
+            android:text="@string/PlaceHoldercontraseña"
+            android:textColor="@color/white" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="694dp"
+        android:layout_marginBottom="69dp"
+        android:layout_marginStart="131dp"
+        android:text="@string/ingresar"
+        android:textColor="@color/white"
+        app:backgroundTint="@color/moradoPrincipal"
+        app:layout_anchorGravity="center" />
+
+    <ImageView
+        android:id="@+id/imagenfondo"
+        android:layout_width="411dp"
+        android:layout_height="197dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@string/imagenFondo"
+        app:srcCompat="@drawable/imagenfondo" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
