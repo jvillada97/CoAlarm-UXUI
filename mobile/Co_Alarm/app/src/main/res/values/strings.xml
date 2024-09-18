@@ -24,4 +24,9 @@
     <string name="placeHolderCorreo">Ingresa tu correo</string>
     <string name="constraseña">Contraseña</string>
     <string name="PlaceHoldercontraseña">**********</string>
+    <string name="nombreGrupo">Nombre del grupo</string>
+    <string name="placeHolderNombreGrupo">Ingresa el nombre del grupo</string>
+    <string name="amigos">Amigos</string>
+    <string name="añadirAmigo">Añadir Amigo</string>
+    <string name="crearGrupo">Crear Grupo</string>
 </resources>
