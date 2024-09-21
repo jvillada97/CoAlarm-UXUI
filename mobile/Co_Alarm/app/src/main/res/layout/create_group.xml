@@ -63,7 +63,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/buttonLogin"
+        android:id="@+id/buttonCreateGroup"
         android:layout_width="150dp"
         android:layout_height="60dp"
         android:layout_centerHorizontal="true"
@@ -71,9 +71,11 @@
         android:layout_marginBottom="69dp"
         android:layout_marginStart="131dp"
         android:text="@string/crearGrupo"
-        android:textColor="@color/white"
-        app:backgroundTint="@color/moradoPrincipal"
-        app:layout_anchorGravity="center" />
+        android:textColor="@color/button_text_selector"
+        app:backgroundTint="@drawable/button_background_selector"
+        app:layout_anchorGravity="center"
+        app:strokeColor="@color/moradoPrincipal"
+        app:strokeWidth="1dp"/>
 
     <TextView
         android:id="@+id/textView"
@@ -83,30 +85,54 @@
         android:layout_marginTop="249dp"
         android:fontFamily="@font/lato_bold"
         android:text="@string/amigos"
-        android:textSize="24dp" />
+        android:textSize="24sp" />
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="314dp"
         android:layout_height="428dp"
-        android:orientation="horizontal"
         android:layout_marginStart="48dp"
         android:layout_marginTop="283dp"
         android:background="@color/moradoPrincipal"
-        >
+        android:orientation="horizontal">
 
         <CheckBox
             android:id="@+id/checkBox"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
             android:layout_weight="1"
             android:button="@drawable/rounded_checkbox"
             android:fontFamily="@font/lato"
-            android:text=""
+            android:text="g"
             android:textColor="@color/white"
             android:textIsSelectable="false"
-            app:buttonCompat="@drawable/rounded_checkbox"
-            />
+            app:buttonCompat="@drawable/rounded_checkbox" />
     </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/añadirAmigo"
+        app:srcCompat="@drawable/image_button_selector"
+        android:layout_marginStart="292dp"
+        android:layout_marginTop="631dp"/>
+
+    <TextView
+        android:id="@+id/a_adir_amig"
+        android:layout_width="80dp"
+        android:layout_height="15dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="279dp"
+        android:layout_marginTop="679dp"
+        android:fontFamily="@font/lato"
+        android:gravity="center_vertical"
+        android:lineSpacingExtra="-3sp"
+        android:text="@string/añadirAmigo"
+        android:textColor="@color/blancoCoalarm"
+        android:textSize="13sp" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

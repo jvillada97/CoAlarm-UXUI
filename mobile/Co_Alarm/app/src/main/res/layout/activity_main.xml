@@ -74,17 +74,19 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/buttonLogin"
+        android:id="@+id/buttonCreateAlarm"
         android:layout_width="150dp"
         android:layout_height="60dp"
         android:layout_centerHorizontal="true"
+        android:layout_marginStart="131dp"
         android:layout_marginTop="694dp"
         android:layout_marginBottom="69dp"
-        android:layout_marginStart="131dp"
         android:text="@string/ingresar"
-        android:textColor="@color/white"
-        app:backgroundTint="@color/moradoPrincipal"
-        app:layout_anchorGravity="center" />
+        android:textColor="@color/button_text_selector"
+        app:backgroundTint="@drawable/button_background_selector"
+        app:layout_anchorGravity="center"
+        app:strokeColor="@color/moradoPrincipal"
+        app:strokeWidth="1dp" />
 
     <ImageView
         android:id="@+id/imagenfondo"

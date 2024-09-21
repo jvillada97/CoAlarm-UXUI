@@ -18,8 +18,9 @@
             android:layout_height="116dp"
             android:background="@color/moradoPrincipal"
             android:textAlignment="center"
+            app:menu="@menu/toolbar_menu"
             app:navigationIcon="@drawable/ic_back"
-            app:menu="@menu/toolbar_menu">
+            >
 
             <TextView
                 android:id="@+id/toolbarTitle"
@@ -142,16 +143,19 @@
         app:boxStrokeColor="@color/moradoPrincipal"
         app:boxStrokeWidth="1dp">
 
-        <com.google.android.material.textfield.TextInputEditText
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteGrupo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/lato"
+            android:textSize="16dp"
             android:gravity="center_vertical"
             android:text="@string/placeHolderGrupo"
             android:textColor="@color/grisCoAlarm"
             android:textColorHint="@color/grisCoAlarm"
-            android:textColorLink="@color/moradoPrincipal" />
-
+            android:textColorLink="@color/moradoPrincipal"
+            android:focusable="false"
+            android:paddingStart="15dp"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -171,20 +175,23 @@
         app:boxStrokeColor="@color/moradoPrincipal"
         app:boxStrokeWidth="1dp">
 
-        <com.google.android.material.textfield.TextInputEditText
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteFrecuencia"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/lato"
+            android:textSize="16dp"
             android:gravity="center_vertical"
             android:text="@string/placeHolderFrecuencia"
             android:textColor="@color/grisCoAlarm"
             android:textColorHint="@color/grisCoAlarm"
-            android:textColorLink="@color/moradoPrincipal" />
-
+            android:textColorLink="@color/moradoPrincipal"
+            android:focusable="false"
+            android:paddingStart="15dp"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/buttonLogin"
+        android:id="@+id/buttonCreateAlarm"
         android:layout_width="150dp"
         android:layout_height="60dp"
         android:layout_centerHorizontal="true"
@@ -192,8 +199,10 @@
         android:layout_marginBottom="69dp"
         android:layout_marginStart="131dp"
         android:text="@string/crearAlarma"
-        android:textColor="@color/white"
-        app:backgroundTint="@color/moradoPrincipal"
-        app:layout_anchorGravity="center" />
+        android:textColor="@color/button_text_selector"
+        app:backgroundTint="@drawable/button_background_selector"
+        app:layout_anchorGravity="center"
+        app:strokeColor="@color/moradoPrincipal"
+        app:strokeWidth="1dp"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
