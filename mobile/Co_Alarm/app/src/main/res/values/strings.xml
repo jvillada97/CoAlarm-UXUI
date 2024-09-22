@@ -34,4 +34,11 @@
     <string name="tusAlarmas">Tus Alarmas</string>
     <string name="nuevoGrupo">Nuevo Grupo</string>
     <string name="nuevaAlarma">Nueva Alarma</string>
+    <string name="actualizarAlarma">Actualizar Alarma</string>
+
+    <string name="tituloEjemplo">Reunión UX</string>
+    <string name="fechaEjemplo">09/30/2024</string>
+    <string name="horaEjemplo">06:00 PM</string>
+    <string name="grupoEjemplo">Grupo 3</string>
+    <string name="frecuendiaEjemplo">Semanal</string>
 </resources>

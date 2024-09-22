@@ -19,7 +19,7 @@ class menu : AppCompatActivity() {
 
         val buttonAlarm: ImageButton = findViewById(R.id.imageButtonAlarms)
         buttonAlarm.setOnClickListener {
-            val intent = Intent(this, create_alarm::class.java)
+            val intent = Intent(this, edit_alarm::class.java)
             startActivity(intent)
         }
 
