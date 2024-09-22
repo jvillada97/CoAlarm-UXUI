@@ -94,20 +94,96 @@
         android:layout_marginStart="48dp"
         android:layout_marginTop="283dp"
         android:background="@color/moradoPrincipal"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
         <CheckBox
-            android:id="@+id/checkBox"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="18dp"
-            android:layout_weight="1"
-            android:button="@drawable/rounded_checkbox"
+            android:id="@+id/checkBox1"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
             android:fontFamily="@font/lato"
-            android:text="g"
+            android:text="Deanna Cummings"
             android:textColor="@color/white"
-            android:textIsSelectable="false"
-            app:buttonCompat="@drawable/rounded_checkbox" />
+            android:textIsSelectable="false" />
+
+        <CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:layout_marginLeft="0dp"
+            android:fontFamily="@font/lato"
+            android:text="Taylor Osborne"
+            android:textColor="@color/white"
+            android:textIsSelectable="false" />
+
+        <CheckBox
+            android:id="@+id/checkBox3"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:layout_marginLeft="0dp"
+            android:fontFamily="@font/lato"
+            android:text="Tammy Roberts"
+            android:textColor="@color/white"
+            android:textIsSelectable="false" />
+
+        <CheckBox
+            android:id="@+id/checkBox4"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:layout_marginLeft="0dp"
+            android:fontFamily="@font/lato"
+            android:text="Daniel Mendez"
+            android:textColor="@color/white"
+            android:textIsSelectable="false" />
+
+        <CheckBox
+            android:id="@+id/checkBox5"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:layout_marginLeft="0dp"
+            android:fontFamily="@font/lato"
+            android:text="David Smith"
+            android:textColor="@color/white"
+            android:textIsSelectable="false" />
+
+        <CheckBox
+            android:id="@+id/checkBox6"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:layout_marginLeft="0dp"
+            android:fontFamily="@font/lato"
+            android:text="Melissa David"
+            android:textColor="@color/white"
+            android:textIsSelectable="false" />
+
+        <CheckBox
+            android:id="@+id/checkBox7"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:layout_marginLeft="0dp"
+            android:fontFamily="@font/lato"
+            android:text="Christine Fowler"
+            android:textColor="@color/white"
+            android:textIsSelectable="false" />
+
+        <CheckBox
+            android:id="@+id/checkBox8"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:layout_marginLeft="0dp"
+            android:fontFamily="@font/lato"
+            android:text="Jeffrey Velazquez"
+            android:textColor="@color/white"
+            android:textIsSelectable="false" />
+
+        <CheckBox
+            android:id="@+id/checkBox9"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:layout_marginLeft="0dp"
+            android:fontFamily="@font/lato"
+            android:text="Amanda Dougherty"
+            android:textColor="@color/white"
+            android:textIsSelectable="false" />
     </LinearLayout>
 
     <ImageButton
