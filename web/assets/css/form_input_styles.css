@@ -1,0 +1,39 @@
+.input-group {
+    position: relative;
+}
+
+.input-group input {
+    width: 360px;
+    height: 60px;
+    font-size: 16px;
+    color: #fff;
+    padding: 0 15px;
+    background: transparent;
+    border: 1.6px solid #000;
+    outline: none;
+    border-radius: 5px;
+}
+
+.input-group label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    font-size: 36px;
+    color: #8338EC;
+    padding: 0 5px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-group input:hover {
+    
+    border-color: #8338EC; 
+}
+
+.input-group input:focus~label,
+.input-group input:valid~label {
+    top: 0;
+    font-size: 25px;
+    background: #ffff;
+}

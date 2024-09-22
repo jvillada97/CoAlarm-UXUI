@@ -1,0 +1,16 @@
+.login-button {
+    position: relative;
+}
+
+.login-button button {
+    background-color: #8338EC;
+    border-color: #8338EC;
+    border-radius: 25px;
+    color: #fff;
+    font-size: 28px;
+}
+
+.login-button button:hover {
+    background-color: #F3F3F4;
+    color: #8338EC;
+}

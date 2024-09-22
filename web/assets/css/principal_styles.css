@@ -1,0 +1,28 @@
+
+body {
+    height: 100%;
+    background-image: url('../images/LoginBackground.jpg'); /* Set the background image */
+    background-size: cover; /* Ensure the image covers the entire background */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+html {
+    height: 100%;
+}
+
+.text-register {
+    position: relative;
+}
+
+.hiperlink-register {
+    position: relative;
+    color: #8338EC;
+}
+
+.hiperlink-register:hover {
+    text-decoration: underline;
+}
