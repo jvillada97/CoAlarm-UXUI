@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    tools:context=".MainActivity"
+    android:background="@drawable/fondo2">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="116dp"
+            android:background="@color/moradoPrincipal"
+            android:textAlignment="center">
+
+            <TextView
+                android:id="@+id/toolbarTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:text="@string/app_name"
+                android:textAppearance="@style/ToolbarTitleTextAppearance"
+                android:textColor="@color/blancoCoalarm"
+                android:paddingBottom="8dp"/>
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ImageButton
+        android:id="@+id/imageButtonAlarms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="267dp"
+        android:layout_marginStart="72dp"
+        android:background="#00FFFFFF"
+        app:srcCompat="@drawable/menu_alarms"
+        android:contentDescription="@string/tusAlarmas"/>
+
+    <ImageButton
+        android:id="@+id/imageButtonNewAlarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="267dp"
+        android:layout_marginStart="252dp"
+        android:background="#00FFFFFF"
+        app:srcCompat="@drawable/menu_newalarm"
+        android:contentDescription="@string/nuevaAlarma"/>
+
+    <ImageButton
+        android:id="@+id/imageButtonNewGroup"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="247dp"
+        android:layout_marginTop="473dp"
+        android:background="#00FFFFFF"
+        app:srcCompat="@drawable/menu_newgroups"
+        android:contentDescription="@string/nuevoGrupo"/>
+
+    <ImageButton
+        android:id="@+id/imageButtonGroups"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="469dp"
+        android:layout_marginStart="72dp"
+        android:background="#00FFFFFF"
+        app:srcCompat="@drawable/menu_groups"
+        android:contentDescription="@string/tusGrupos" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

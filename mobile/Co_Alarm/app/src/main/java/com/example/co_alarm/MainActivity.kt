@@ -13,9 +13,9 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-        val buttonLogin: Button = findViewById(R.id.buttonCreateAlarm)
+        val buttonLogin: Button = findViewById(R.id.buttonLogin)
         buttonLogin.setOnClickListener {
-            val intent = Intent(this, create_alarm::class.java)
+            val intent = Intent(this, menu::class.java)
             startActivity(intent)
         }
 

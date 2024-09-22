@@ -30,4 +30,8 @@
     <string name="añadirAmigo">Añadir Amigo</string>
     <string name="crearGrupo">Crear Grupo</string>
     <string name="aceptar">Aceptar</string>
+    <string name="tusGrupos">Tus Grupos</string>
+    <string name="tusAlarmas">Tus Alarmas</string>
+    <string name="nuevoGrupo">Nuevo Grupo</string>
+    <string name="nuevaAlarma">Nueva Alarma</string>
 </resources>

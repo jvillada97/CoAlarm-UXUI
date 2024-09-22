@@ -26,17 +26,14 @@ class create_alarm : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.create_alarm)
 
-        // Encuentra el DatePicker
         val datePickerIni: DatePicker = findViewById(R.id.datePicker)
 
-        // Oculta la cabecera del DatePicker
         hideDatePickerHeader(datePickerIni)
 
         val buttonText = findViewById<TextView>(R.id.textAccept)
         val datePicker: DatePicker = findViewById(R.id.datePicker)
 
         buttonText.setOnClickListener {
-            // Aquí puedes manejar la fecha seleccionada
             val day = datePicker.dayOfMonth
             val month = datePicker.month
             val year = datePicker.year
@@ -135,7 +132,7 @@ class create_alarm : AppCompatActivity() {
                 true
             }
             R.id.home_button -> {
-                val intent = Intent(this, MainActivity::class.java) // Redirigir a MainActivity o la actividad deseada
+                val intent = Intent(this, menu::class.java)
                 startActivity(intent)
                 true
             }
