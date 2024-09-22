@@ -5,4 +5,8 @@
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">40sp</item>
     </style>
+
+    <style name="CustomButton">
+        <item name="android:textColor">@color/moradoPrincipal</item>
+    </style>
 </resources>

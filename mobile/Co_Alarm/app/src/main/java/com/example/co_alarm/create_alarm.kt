@@ -11,54 +11,70 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import com.google.android.material.textfield.TextInputLayout
+import android.view.View
+import android.widget.DatePicker
+import android.widget.ImageView
+import android.widget.TextView
+import com.google.android.material.textfield.TextInputEditText
+import java.util.*
 
 class create_alarm : AppCompatActivity() {
+    private lateinit var datePicker: DatePicker
+    private lateinit var selectedDateTextView: TextView
+    private lateinit var calendarIcon: ImageView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.create_alarm)
 
+        // Encuentra el DatePicker
+        val datePickerIni: DatePicker = findViewById(R.id.datePicker)
+
+        // Oculta la cabecera del DatePicker
+        hideDatePickerHeader(datePickerIni)
+
+        val buttonText = findViewById<TextView>(R.id.textAccept)
+        val datePicker: DatePicker = findViewById(R.id.datePicker)
+
+        buttonText.setOnClickListener {
+            // Aquí puedes manejar la fecha seleccionada
+            val day = datePicker.dayOfMonth
+            val month = datePicker.month
+            val year = datePicker.year
+            datePicker.visibility = View.GONE
+            buttonText.visibility = View.GONE
+        }
+
         val textInputLayout: TextInputLayout = findViewById(R.id.grupo)
         val autoCompleteTextView: AutoCompleteTextView = findViewById(R.id.autoCompleteGrupo)
 
-        // Lista de grupos
         val grupos = listOf("Grupo 1", "Grupo 2", "Grupo 3")
 
-        // Adaptador
         val adapter = ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, grupos)
         autoCompleteTextView.setAdapter(adapter)
 
-        // Cambiar el color del texto al seleccionar un grupo
         autoCompleteTextView.setOnItemClickListener { parent, view, position, id ->
             autoCompleteTextView.setTextColor(Color.BLACK) // Cambiar a negro
         }
 
-
         val textInputLayoutF: TextInputLayout = findViewById(R.id.frecuencia)
         val autoCompleteTextView1: AutoCompleteTextView = findViewById(R.id.autoCompleteFrecuencia)
 
-        // Lista de grupos
         val frecuencias = listOf("Diario", "Semanal", "Mensual", "Anual")
 
-        // Adaptador
         val adapterF = ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, frecuencias)
         autoCompleteTextView1.setAdapter(adapterF)
 
-        // Cambiar el color del texto al seleccionar un grupo
         autoCompleteTextView1.setOnItemClickListener { parent, view, position, id ->
-            autoCompleteTextView1.setTextColor(Color.BLACK) // Cambiar a negro
+            autoCompleteTextView1.setTextColor(Color.BLACK)
         }
-        // Configurar Toolbar como ActionBar
         val toolbar: Toolbar = findViewById(R.id.topAppBar)
         setSupportActionBar(toolbar)
 
-        // Mostrar el botón de navegación (ícono de back)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_back)
         supportActionBar?.setDisplayShowTitleEnabled(false)
 
-        // Manejar el clic en el icono de la flecha
         textInputLayout.setEndIconOnClickListener {
-            // Abre el dropdown de AutoCompleteTextView
             if (autoCompleteTextView.isPerformingCompletion) {
                 autoCompleteTextView.dismissDropDown()
             } else {
@@ -66,9 +82,7 @@ class create_alarm : AppCompatActivity() {
             }
         }
 
-        // Manejar el clic en el icono de la flecha
         textInputLayoutF.setEndIconOnClickListener {
-            // Abre el dropdown de AutoCompleteTextView
             if (autoCompleteTextView1.isPerformingCompletion) {
                 autoCompleteTextView1.dismissDropDown()
             } else {
@@ -76,35 +90,85 @@ class create_alarm : AppCompatActivity() {
             }
         }
 
-        // Configuración del botón de crear alarma
         val buttonCreateAlarm: Button = findViewById(R.id.buttonCreateAlarm)
         buttonCreateAlarm.setOnClickListener {
             val intent = Intent(this, create_group::class.java)
             startActivity(intent)
         }
+
+        val selectedDateTextView = findViewById<TextInputEditText>(R.id.selectedDateTextView)
+        val textInputLayoutDate = findViewById<TextInputLayout>(R.id.fecha)
+        val todayInMillis = System.currentTimeMillis()
+
+        datePicker.minDate = todayInMillis
+        textInputLayoutDate.setEndIconOnClickListener {
+            if (datePicker.visibility == View.GONE) {
+                datePicker.visibility = View.VISIBLE
+                buttonText.visibility = View.VISIBLE
+                datePicker.requestFocus()
+            } else {
+                datePicker.visibility = View.GONE
+                buttonText.visibility = View.GONE
+            }
+        }
+
+        datePicker.init(datePicker.year, datePicker.month, datePicker.dayOfMonth) { _, year, month, day ->
+            val selectedDate = "$day/${month + 1}/$year"
+            selectedDateTextView.setText(selectedDate)
+            selectedDateTextView.setTextColor(Color.BLACK)
+        }
+
     }
 
-    // Inflar el menú con el ícono de "home"
+
+
+
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.toolbar_menu, menu)
         return true
     }
 
-    // Manejar las acciones de los botones en la Toolbar (back y home)
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             android.R.id.home -> {
-                // Acción cuando se presiona el ícono de "back"
                 onBackPressed()
                 true
             }
             R.id.home_button -> {
-                // Acción cuando se presiona el ícono de "home"
                 val intent = Intent(this, MainActivity::class.java) // Redirigir a MainActivity o la actividad deseada
                 startActivity(intent)
                 true
             }
             else -> super.onOptionsItemSelected(item)
         }
+    }
+
+    private fun hideDatePickerHeader(datePicker: DatePicker) {
+        val daySpinnerId = resources.getIdentifier("day", "id", "android")
+        val monthSpinnerId = resources.getIdentifier("month", "id", "android")
+        val yearSpinnerId = resources.getIdentifier("year", "id", "android")
+
+
+        val daySpinner = datePicker.findViewById<View>(daySpinnerId)
+        val monthSpinner = datePicker.findViewById<View>(monthSpinnerId)
+        val yearSpinner = datePicker.findViewById<View>(yearSpinnerId)
+
+        if (daySpinner != null) {
+            daySpinner.visibility = View.VISIBLE
+        }
+        if (monthSpinner != null) {
+            monthSpinner.visibility = View.VISIBLE
+        }
+        if (yearSpinner != null) {
+            yearSpinner.visibility = View.VISIBLE
+        }
+
+        val headerId = resources.getIdentifier("date_picker_header", "id", "android")
+        val header = datePicker.findViewById<View>(headerId)
+        if (header != null) {
+            header.visibility = View.GONE
+        }
+
+
     }
 }
