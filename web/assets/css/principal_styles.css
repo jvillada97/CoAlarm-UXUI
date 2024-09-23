@@ -21,6 +21,7 @@ html {
 .hiperlink-register {
     position: relative;
     color: #8338EC;
+    text-decoration: none;
 }
 
 .hiperlink-register:hover {
