@@ -1,7 +1,6 @@
 package com.example.co_alarm
 
 import android.app.AlertDialog
-import android.content.DialogInterface
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
@@ -16,26 +15,19 @@ import androidx.appcompat.widget.Toolbar
 import com.google.android.material.textfield.TextInputLayout
 import android.view.View
 import android.widget.DatePicker
-import android.widget.ImageView
 import android.widget.TextView
-import androidx.core.content.res.ResourcesCompat
 import com.google.android.material.textfield.TextInputEditText
-import java.util.*
 
 class edit_alarm : AppCompatActivity() {
-    private lateinit var datePicker: DatePicker
-    private lateinit var selectedDateTextView: TextView
-    private lateinit var calendarIcon: ImageView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.edit_alarm)
 
-        val datePickerIni: DatePicker = findViewById(R.id.datePicker)
+        val datePicker: DatePicker = findViewById(R.id.datePicker)
 
-        hideDatePickerHeader(datePickerIni)
+        hideDatePickerHeader(datePicker)
 
         val buttonText = findViewById<TextView>(R.id.textAccept)
-        val datePicker: DatePicker = findViewById(R.id.datePicker)
 
         buttonText.setOnClickListener {
             val day = datePicker.dayOfMonth
@@ -134,7 +126,7 @@ class edit_alarm : AppCompatActivity() {
                 true
             }
             R.id.home_button -> {
-                val intent = Intent(this, menu::class.java)
+                val intent = Intent(this, Menu::class.java)
                 startActivity(intent)
                 true
             }

@@ -100,10 +100,11 @@
             android:id="@+id/checkBox1"
             android:layout_width="match_parent"
             android:layout_height="37dp"
+            android:buttonTint="@color/white"
             android:fontFamily="@font/lato"
             android:text="Deanna Cummings"
             android:textColor="@color/white"
-            android:textIsSelectable="false" />
+            android:textIsSelectable="false"/>
 
         <CheckBox
             android:id="@+id/checkBox2"
