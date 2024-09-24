@@ -28,5 +28,11 @@ class Menu : AppCompatActivity() {
             val intent = Intent(this, create_group::class.java)
             startActivity(intent)
         }
+
+        val buttonGroups: ImageButton = findViewById(R.id.imageButtonGroups)
+        buttonGroups.setOnClickListener {
+            val intent = Intent(this, alert::class.java)
+            startActivity(intent)
+        }
     }
 }

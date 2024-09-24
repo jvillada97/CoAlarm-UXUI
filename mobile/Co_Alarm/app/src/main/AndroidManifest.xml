@@ -17,6 +17,7 @@
         <activity android:name=".create_group" />
         <activity android:name=".edit_alarm" />
         <activity android:name=".Menu" />
+        <activity android:name=".alert" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
