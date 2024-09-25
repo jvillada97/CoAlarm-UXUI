@@ -45,7 +45,7 @@ button_goto_menu.style.width = '350px';
 button_goto_menu.style.height = '50px';
 button_goto_menu.textContent = 'Ir a la página principal'
 button_goto_menu.addEventListener('click', function(){
-    window.location.href = 'web_verification.html';
+    window.location.href = 'menu.html';
 });
 
 div_form.appendChild(div_button_goto_menu);
