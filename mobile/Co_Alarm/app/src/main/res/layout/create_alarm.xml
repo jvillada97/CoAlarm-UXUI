@@ -63,36 +63,6 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/hora"
-        android:layout_width="312dp"
-        android:layout_height="56dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="341dp"
-        android:layout_marginEnd="50dp"
-        android:hint="@string/hora"
-        app:boxBackgroundMode="outline"
-        app:endIconMode="custom"
-        app:endIconDrawable="@drawable/ic_hour"
-        app:boxStrokeColor="@color/moradoPrincipal"
-        app:boxStrokeWidth="1dp"
-        >
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/lato"
-            android:text="@string/placeHolderHora"
-            android:inputType="date"
-            android:gravity="center_vertical"
-            android:textColor="@color/grisCoAlarm"
-            android:textColorHint="@color/grisCoAlarm"
-            android:textColorLink="@color/moradoPrincipal" />
-    </com.google.android.material.textfield.TextInputLayout>
-
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/grupo"
@@ -174,9 +144,40 @@
         app:strokeWidth="1dp"/>
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/hora"
+        android:layout_width="312dp"
+        android:layout_height="56dp"
+        android:hint="@string/hora"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="341dp"
+        android:layout_marginEnd="50dp"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeColor="@color/moradoPrincipal"
+        app:boxStrokeWidth="1dp"
+        app:endIconDrawable="@drawable/ic_hour"
+        app:endIconMode="custom">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/timeInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:fontFamily="@font/lato"
+            android:gravity="center_vertical"
+            android:inputType="time"
+            android:text="@string/placeHolderHora"
+            android:textColor="@color/grisCoAlarm"
+            android:textColorHint="@color/grisCoAlarm"
+            android:textColorLink="@color/moradoPrincipal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/fecha"
         android:layout_width="312dp"
-        android:layout_height="527dp"
+        android:layout_height="427dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
@@ -197,11 +198,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clickable="true"
-            android:cursorVisible="false"
-            android:focusable="false"
+            android:cursorVisible="true"
+            android:focusable="true"
             android:fontFamily="@font/lato"
             android:gravity="center_vertical"
-            android:inputType="none"
+            android:inputType="date"
             android:text="@string/placeHolder"
             android:textColor="@color/grisCoAlarm"
             android:textColorHint="@color/grisCoAlarm"

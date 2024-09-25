@@ -17,6 +17,8 @@ import android.view.View
 import android.widget.DatePicker
 import android.widget.TextView
 import com.google.android.material.textfield.TextInputEditText
+import com.google.android.material.timepicker.MaterialTimePicker
+import com.google.android.material.timepicker.TimeFormat
 
 class create_alarm : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,10 +31,17 @@ class create_alarm : AppCompatActivity() {
 
         val buttonText = findViewById<TextView>(R.id.textAccept)
 
+        val selectedDateTextView = findViewById<TextInputEditText>(R.id.selectedDateTextView)
+
         buttonText.setOnClickListener {
             val day = datePicker.dayOfMonth
-            val month = datePicker.month
+            val month = datePicker.month + 1
             val year = datePicker.year
+
+            val selectedDate = String.format("%02d/%02d/%d", month, day, year)
+
+            selectedDateTextView.setText(selectedDate)
+            selectedDateTextView.setTextColor(Color.BLACK)
             datePicker.visibility = View.GONE
             buttonText.visibility = View.GONE
         }
@@ -88,7 +97,6 @@ class create_alarm : AppCompatActivity() {
             showCreateConfirmationDialog()
         }
 
-        val selectedDateTextView = findViewById<TextInputEditText>(R.id.selectedDateTextView)
         val textInputLayoutDate = findViewById<TextInputLayout>(R.id.fecha)
         val todayInMillis = System.currentTimeMillis()
 
@@ -104,16 +112,61 @@ class create_alarm : AppCompatActivity() {
             }
         }
 
-        datePicker.init(datePicker.year, datePicker.month, datePicker.dayOfMonth) { _, year, month, day ->
-            val selectedDate = "$day/${month + 1}/$year"
-            selectedDateTextView.setText(selectedDate)
-            selectedDateTextView.setTextColor(Color.BLACK)
-        }
+        val timeInputEditText: TextInputEditText = findViewById(R.id.timeInputEditText)
 
+        timeInputEditText.setOnClickListener {
+            showTimePicker { selectedTime ->
+                timeInputEditText.setText(selectedTime)
+            }
+        }
     }
 
+    private fun showTimePicker(onTimeSelected: (String) -> Unit) {
+        val picker = MaterialTimePicker.Builder()
+            .setTimeFormat(TimeFormat.CLOCK_12H)
+            .setHour(12)
+            .setMinute(0)
+            .setTitleText(" ")
+            .setInputMode(MaterialTimePicker.INPUT_MODE_KEYBOARD)
+            .build()
 
 
+        picker.show(supportFragmentManager, "timePicker")
+
+        supportFragmentManager.executePendingTransactions()
+
+        picker.dialog?.let { dialog ->
+
+            val switchModeButton = dialog.findViewById<View>(com.google.android.material.R.id.material_timepicker_mode_button)
+            switchModeButton?.visibility = View.GONE
+
+            val cancelButton = dialog.findViewById<View>(com.google.android.material.R.id.material_timepicker_cancel_button)
+            cancelButton?.visibility = View.GONE
+
+            val okButton = dialog.findViewById<Button>(com.google.android.material.R.id.material_timepicker_ok_button)
+            okButton?.text = "Aceptar"
+
+
+            val timePickerView = dialog.findViewById<View>(com.google.android.material.R.id.material_timepicker_view)
+            timePickerView?.let { view ->
+                val hourLabel = view.findViewById<View>(com.google.android.material.R.id.material_label)
+                hourLabel?.visibility = View.GONE
+
+                val minuteLabel = view.findViewById<View>(com.google.android.material.R.id.material_label)
+                minuteLabel?.visibility = View.GONE
+            }
+        }
+
+        picker.addOnPositiveButtonClickListener {
+            val selectedHour = picker.hour
+            val selectedMinute = picker.minute
+            val formattedTime = String.format("%02d:%02d %s",
+                if (selectedHour % 12 == 0) 12 else selectedHour % 12,
+                selectedMinute,
+                if (selectedHour >= 12) "PM" else "AM")
+            onTimeSelected(formattedTime)
+        }
+    }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.toolbar_menu, menu)
