@@ -1,0 +1,31 @@
+.search-bar input::placeholder {
+    color: #8338EC;
+}
+
+.search-bar:hover input::placeholder {
+    color: #000;  
+}
+
+.search-bar:hover {
+    border-color: #8338EC;
+}
+
+.list-button {
+    width: 1175px;
+    height: 120px;
+    border: 1px solid #8338EC;
+    background-color: #F3F3F4;
+    color: #8338EC;
+    font-family: 'Lato', sans-serif;
+    font-size: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+.list-button:hover {
+    background-color: #8338EC;
+    color: #fff;
+}
