@@ -29,3 +29,10 @@
     background-color: #8338EC;
     color: #fff;
 }
+
+#new-group-icon {
+    position: absolute;
+    top: 790px;
+    left: 1600px;
+    width: 80px;
+}

@@ -89,5 +89,21 @@ buttonContainer.appendChild(button1);
 buttonContainer.appendChild(button2);
 buttonContainer.appendChild(button3);
 
+//boton crear 
+const add_group_icon = document.createElement('img');
+add_group_icon.src = '../assets/images/create_group_icon.png';
+add_group_icon.alt = 'Crear grupo';
+add_group_icon.id = 'new-group-icon';
+const title_add_group = document.createElement('h2');
+//title_add_group.className = 'lateral-bar-titles';
+title_add_group.textContent = 'Crear grupo';
+title_add_group.style.position = 'absolute';
+title_add_group.style.left = '1575px';
+title_add_group.style.top = '740px';
+title_add_group.style.fontFamily = 'Lato, sans-serif';
+title_add_group.style.color = '#1D1B20' 
+
+document.getElementById('form-container').appendChild(add_group_icon);
+document.getElementById('form-container').appendChild(title_add_group);
 
 document.getElementById('form-container').appendChild(buttonContainer);
