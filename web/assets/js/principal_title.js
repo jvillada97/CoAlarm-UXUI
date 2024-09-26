@@ -1,8 +1,8 @@
 const div = document.createElement('div');
 div.style.width = '1130px';
 div.style.height = '120px';
-div.style.position = 'fixed';
-div.style.left = '395px';
+div.style.position = 'absolute';
+div.style.left = '595px';
 div.style.top = '100px';
 div.style.transform = 'translateX(-20%)'; 
 div.style.display = 'flex';
